@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 import React, { useState } from 'react';
 import Video from '../../videos/video.mp4';
+import { Button } from '../Button';
 import {
     Container,
     Background,
@@ -23,7 +24,7 @@ export default function HeroSection() {
     return (
         <Container>
             <Background>
-                <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
+                <VideoBg muted src={Video} type="video/mp4" />
             </Background>
             <Content>
                 <H1>Banco virtual é mais fácil</H1>
@@ -36,6 +37,8 @@ export default function HeroSection() {
                         to="cadastro"
                         onMouseEnter={onHover}
                         onMouseLeave={onHover}
+                        primary="true"
+                        dark="true"
                     >
                         Cadastre-se {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
