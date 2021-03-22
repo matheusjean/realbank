@@ -14,13 +14,14 @@ import {
     ButtonLink,
 } from './styles';
 
-export default function NavBar() {
+// eslint-disable-next-line react/prop-types
+export default function NavBar({ toogle }) {
     return (
         <>
             <Nav>
                 <Container>
                     <Logo to="/">Banco Real</Logo>
-                    <MobileIcon>
+                    <MobileIcon onClick={toogle}>
                         <FaBars />
                     </MobileIcon>
                     <Menu>

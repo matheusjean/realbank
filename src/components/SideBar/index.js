@@ -10,18 +10,27 @@ import {
     Route,
 } from './styles';
 
-export default function SideBar() {
+// eslint-disable-next-line react/prop-types
+export default function SideBar({ isOpen, toogle }) {
     return (
-        <Container>
-            <Icon>
+        <Container isOpen={isOpen} onClick={toogle}>
+            <Icon onClick={toogle}>
                 <Close />
             </Icon>
             <Wrapper>
                 <Menu>
-                    <Link to="sobre">Sobre</Link>
-                    <Link to="descubra">Descubra</Link>
-                    <Link to="servicos">Serviços</Link>
-                    <Link to="cadastro">Cadastro</Link>
+                    <Link to="sobre" onClick={toogle}>
+                        Sobre
+                    </Link>
+                    <Link to="descubra" onClick={toogle}>
+                        Descubra
+                    </Link>
+                    <Link to="servicos" onClick={toogle}>
+                        Serviços
+                    </Link>
+                    <Link to="cadastro" onClick={toogle}>
+                        Cadastro
+                    </Link>
                 </Menu>
                 <Button>
                     <Route to="/login">Login</Route>
