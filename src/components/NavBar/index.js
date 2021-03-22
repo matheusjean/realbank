@@ -45,7 +45,7 @@ export default function NavBar({ toogle }) {
                         </Item>
                     </Menu>
                     <Button>
-                        <ButtonLink to="/signin">Sign In</ButtonLink>
+                        <ButtonLink to="/signin">Login</ButtonLink>
                     </Button>
                 </Container>
             </Nav>

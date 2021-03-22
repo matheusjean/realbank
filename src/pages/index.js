@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import HeroSection from '../components/HeroSection';
 import NavBar from '../components/NavBar';
 import SideBar from '../components/SideBar/index';
 
@@ -13,6 +14,7 @@ export default function Home() {
         <>
             <SideBar isOpen={isOpen} toogle={toogle} />
             <NavBar toogle={toogle} />
+            <HeroSection />
         </>
     );
 }
