@@ -1,7 +1,10 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import Signin from '../components/Signin';
 
 export default function login() {
-    return <h1>Login</h1>;
+    return (
+        <div>
+            <Signin />
+        </div>
+    );
 }

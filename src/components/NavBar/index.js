@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { animateScroll as scroll } from 'react-scroll';
 
 import {
     Nav,
@@ -30,18 +31,33 @@ export default function NavBar({ toogle }) {
         window.addEventListener('scroll', changeNav);
     }, []);
 
+    function toogleHome() {
+        scroll.scrollToTop();
+    }
+
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <Nav scrollNav={scrollNav}>
                     <Container>
-                        <Logo to="/">Banco Real</Logo>
+                        <Logo to="/" onClick={toogleHome}>
+                            Banco Real
+                        </Logo>
                         <MobileIcon onClick={toogle}>
                             <FaBars />
                         </MobileIcon>
                         <Menu>
                             <Item>
-                                <Links to="sobre">Sobre</Links>
+                                <Links
+                                    to="sobre"
+                                    smooth
+                                    duration={500}
+                                    spy
+                                    exact="true"
+                                    offset={-80}
+                                >
+                                    Sobre
+                                </Links>
                             </Item>
                         </Menu>
                         <Menu>

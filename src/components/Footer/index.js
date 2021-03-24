@@ -1,4 +1,5 @@
 import React from 'react';
+import { animateScroll as scroll } from 'react-scroll';
 import {
     FaFacebook,
     FaInstagram,
@@ -24,6 +25,10 @@ import {
 } from './styles';
 
 export default function Footer() {
+    function toogleHome() {
+        scroll.scrollToTop();
+    }
+
     return (
         <Container>
             <Wrapper>
@@ -31,43 +36,45 @@ export default function Footer() {
                     <LinksWrp>
                         <Items>
                             <Title>Sobre nós</Title>
-                            <FtLink to="/signin">Como funciona</FtLink>
-                            <FtLink to="/signin">Relatos</FtLink>
-                            <FtLink to="/signin">Carreira</FtLink>
-                            <FtLink to="/signin">Investidores</FtLink>
-                            <FtLink to="/signin">Termos de serviço</FtLink>
+                            <FtLink to="/">Como funciona</FtLink>
+                            <FtLink to="/">Relatos</FtLink>
+                            <FtLink to="/">Carreira</FtLink>
+                            <FtLink to="/">Investidores</FtLink>
+                            <FtLink to="/">Termos de serviço</FtLink>
                         </Items>
 
                         <Items>
                             <Title>Vídeos</Title>
-                            <FtLink to="/signin">Veja nossos vídeos</FtLink>
-                            <FtLink to="/signin">Embaixadores</FtLink>
-                            <FtLink to="/signin">Agências</FtLink>
-                            <FtLink to="/signin">Influenciadores</FtLink>
+                            <FtLink to="/">Veja nossos vídeos</FtLink>
+                            <FtLink to="/">Embaixadores</FtLink>
+                            <FtLink to="/">Agências</FtLink>
+                            <FtLink to="/">Influenciadores</FtLink>
                         </Items>
                     </LinksWrp>
 
                     <LinksWrp>
                         <Items>
                             <Title>Contate-nos</Title>
-                            <FtLink to="/signin">Contato</FtLink>
-                            <FtLink to="/signin">Suporte</FtLink>
-                            <FtLink to="/signin">Destinos</FtLink>
-                            <FtLink to="/signin">Patrocínio</FtLink>
+                            <FtLink to="/">Contato</FtLink>
+                            <FtLink to="/">Suporte</FtLink>
+                            <FtLink to="/">Destinos</FtLink>
+                            <FtLink to="/">Patrocínio</FtLink>
                         </Items>
 
                         <Items>
                             <Title>Redes sociais</Title>
-                            <FtLink to="/signin">Instagram</FtLink>
-                            <FtLink to="/signin">Facebook</FtLink>
-                            <FtLink to="/signin">YouTube</FtLink>
-                            <FtLink to="/signin">Twitter</FtLink>
+                            <FtLink to="/">Instagram</FtLink>
+                            <FtLink to="/">Facebook</FtLink>
+                            <FtLink to="/">YouTube</FtLink>
+                            <FtLink to="/">Twitter</FtLink>
                         </Items>
                     </LinksWrp>
                 </LinksCtn>
                 <Media>
                     <MediaWrapper>
-                        <Logo to="/"> Banco Real</Logo>
+                        <Logo to="/" onClick={toogleHome}>
+                            Banco Real
+                        </Logo>
 
                         <Rights>
                             Banco Real © {new Date().getFullYear()} Todos os
