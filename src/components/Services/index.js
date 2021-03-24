@@ -22,7 +22,7 @@ export default function Services() {
 
                 <Card>
                     <Icon src={Icon2} />
-                    <H2>Escritórios vitual</H2>
+                    <H2>Escritório vitual</H2>
                     <P>
                         Você pode acessar nossa plataforma online de qualquer
                         lugar do mundo

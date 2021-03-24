@@ -24,12 +24,19 @@ export default function HeroSection() {
     return (
         <Container>
             <Background>
-                <VideoBg muted src={Video} type="video/mp4" />
+                <VideoBg
+                    // repeat
+                    // loop
+                    // autoPlay
+                    muted
+                    src={Video}
+                    type="video/mp4"
+                />
             </Background>
             <Content>
                 <H1>Banco virtual é mais fácil</H1>
                 <P>
-                    Cadastre-se hoje e receba R$ 0 em créditos no seu próximo
+                    Cadastre-se hoje e receba R$ 0 em créditos no seu primeiro
                     pagamento =D
                 </P>
                 <Wrapper>

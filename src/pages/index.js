@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import InfoSection from '../components/InfoSection';
 import { homeObj1, homeObj2, homeObj3 } from '../components/InfoSection/Data';
@@ -25,6 +26,7 @@ export default function Home() {
             <InfoSection {...homeObj2} />
             <Services />
             <InfoSection {...homeObj3} />
+            <Footer />
         </>
     );
 }
